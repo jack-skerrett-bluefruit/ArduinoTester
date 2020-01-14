@@ -11,7 +11,7 @@ void parse(){
   buffer[length] = 0;                            //null terminate the string (append a zero)
   if(strcmp(buffer, "ledon") == 0){              //if the string contained within the buffer is identical to "ledon"
     digitalWrite(2, HIGH);
-    Serial.write(buffer);
+    Serial.write(buffer);                        //this is sending confirmation to the terminal that "this is the command you told me to execute" 
   }
   if(strcmp(buffer, "ledoff") == 0){
     digitalWrite(2, LOW);

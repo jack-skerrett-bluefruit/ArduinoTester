@@ -1,4 +1,5 @@
-from someCleverPy import string
+import someCleverPy
 
 while(1):
-    print(string)
+    print(someCleverPy.string)
+    print(someCleverPy.serial_ports())
