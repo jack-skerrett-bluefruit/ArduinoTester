@@ -13,11 +13,12 @@ while(1):
         print()
     elif(var.strip().lower().startswith("com")):
         serialPort = var.upper()
+        break
     else:
         print("Don't be naughty, do it again")
 
 
-ser = serial.Serial('COM12', 115200) #this is the way we open a serial port, we can manipulate the serial port by manipulating the "ser" object
+ser = serial.Serial(serialPort, 115200) #this is the way we open a serial port, we can manipulate the serial port by manipulating the "ser" object
 
 time.sleep(2) #I added this as a bit of debug because I wasn't getting successful communication, so I added in a delay to make sure everything had enough time to talk to each other. This made it work. Arduinos have a start up time
 
